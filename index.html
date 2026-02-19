@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZYFL2 - Akıllı Okul Giriş Sistemi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary-color: #6f42c1; --accent-color: #ffc107; --dark-bg: #121212; }
+        body { font-family: 'Poppins', sans-serif; color: #333; }
+        
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('proje1.jpeg'); 
+            background-size: cover; background-attachment: fixed; color: white; padding: 160px 0; text-align: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98); border-radius: 20px; padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05);
+            height: 100%; transition: 0.3s;
+        }
+        .glass-card:hover { transform: translateY(-10px); border-color: var(--primary-color); }
+
+        .section-title { color: var(--primary-color); font-weight: 700; margin-bottom: 50px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; width: 60%; height: 4px; background: var(--accent-color); position: absolute; bottom: -12px; left: 20%; }
+
+        .video-btn {
+            background: var(--accent-color); color: #000; padding: 18px 45px; border-radius: 50px;
+            font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 12px;
+            transition: 0.3s; box-shadow: 0 10px 25px rgba(255,193,7,0.4);
+        }
+        .video-btn:hover { background: #fff; color: var(--primary-color); transform: scale(1.05); }
+
+        .diff-badge { background: #f0ebf8; color: var(--primary-color); padding: 8px 15px; border-radius: 10px; font-weight: 600; display: inline-block; margin-bottom: 10px; }
+
+        .team-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 5px solid var(--primary-purple); margin-bottom: 20px; }
+        
+        footer { background: var(--dark-bg); color: #fff; padding: 80px 0; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="display-1 fw-bold mb-3">GZYFL2</h1>
+            <p class="lead fs-2 mb-5">Akıllı Okul Giriş ve Biyogüvenlik Takip Sistemi</p>
+            <a href="https://youtu.be/Ea2sfWrnsKM" target="_blank" class="video-btn">
+                <i class="fab fa-youtube fa-2x"></i> PROJE VİDEOSUNU İZLE
+            </a>
+        </div>
+    </header>
+
+    <section class="py-5 container text-center">
+        <h2 class="section-title">Neden Bu Projeyi Geliştirdik?</h2>
+        <div class="row g-4 mt-2">
+            <div class="col-md-6 text-start">
+                <div class="glass-card">
+                    <h4 class="text-danger fw-bold"><i class="fas fa-times-circle me-2"></i>Problem</h4>
+                    <p>Kalabalık okul ortamlarında manuel ateş ve maske kontrolü hem zaman kaybına hem de yüksek hata payına yol açar. Hastalık belirtisi gösteren öğrencilerin takibi ve idareye raporlanmasındaki gecikmeler salgın riskini artırır.</p>
+                </div>
+            </div>
+            <div class="col-md-6 text-start">
+                <div class="glass-card">
+                    <h4 class="text-success fw-bold"><i class="fas fa-check-circle me-2"></i>Çözümümüz</h4>
+                    <p>IoT ve Yapay Zeka destekli otonom terminalimiz; RFID kimlik doğrulama, temassız ateş ölçümü ve anlık maske denetimi yapar. Kritik durumlarda Telegram üzerinden anlık bildirim göndererek idari karar destek mekanizmasını hızlandırır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center"><h2 class="section-title">Çözümümüzün Farkları</h2></div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <span class="diff-badge">Otonom Karar</span>
+                        <h5>Entegre Karar Mekanizması</h5>
+                        <p class="small text-muted">Sistem sadece ölçüm yapmaz; ateş, maske ve kimlik verilerini eşleştirerek geçiş izni kararını kendisi verir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <span class="diff-badge">Anlık Bildirim</span>
+                        <h5>Telegram Entegrasyonu</h5>
+                        <p class="small text-muted">Riskli bir geçiş gerçekleştiği anda sınıf öğretmenine ve idareye doğrudan mobil bildirim gönderilir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <span class="diff-badge">Erken Uyarı</span>
+                        <h5>Vaka Yoğunluk Algoritması</h5>
+                        <p class="small text-muted">Belirlenen vaka eşiği aşıldığında, salgın yayılmadan idareyi uyararak sınıfsal önlemler alınmasını sağlar.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <span class="diff-badge">AI Denetim</span>
+                        <h5>Yapay Zeka Destekli Maske Denetimi</h5>
+                        <p class="small text-muted">Görüntü işleme teknolojisi ile sadece maske kullanımını doğrular ve doğru önlemi alan öğrencilerin geçişine izin verir.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card">
+                        <span class="diff-badge">Akıllı Akış</span>
+                        <h5>Yönlendirme Protokolü</h5>
+                        <p class="small text-muted">Yüksek ateşli öğrencileri otomatik olarak ayrı bir "Sağlık Girişi"ne yönlendirerek okul girişindeki yoğunluğu önler.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                    <div class="p-3">
+                        <i class="fas fa-microchip fa-4x text-primary opacity-25"></i>
+                        <p class="mt-3 fw-bold">Arduino UNO & RFID & IR Entegrasyonu </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 container">
+        <div class="text-center"><h2 class="section-title">Proje Ekibi ve Kariyer Hedefleri</h2></div>
+        <div class="row g-4 mt-4">
+            <div class="col-lg-4">
+                <div class="glass-card text-center">
+                    <img src="ahmetbarlasozkan.jpeg" class="team-img" alt="Ahmet Barlas Özkan">
+                    <h4>Ahmet Barlas Özkan</h4>
+                    <p class="text-primary small fw-bold">Yazılım & 3D Tasarım</p>
+                    <hr>
+                    <div class="text-start small">
+                        <p><strong>Beceriler:</strong> C, C++, Python, Spider yazılım dilleri ve Fusion 360 ile 3D tasarım.</p>
+                        <p><strong>Projeler:</strong> Reflex ölçer mobil uygulaması ve Bluetooth kontrollü sistemler.</p>
+                        <p><strong>Hedef:</strong> Yazılım Mühendisliği alanında oyun ve mobil uygulama geliştirme.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="glass-card text-center">
+                    <img src="MehmetErenGuroğlu.jpeg" class="team-img" alt="Mehmet Eren Güroğlu">
+                    <h4>Mehmet Eren Güroğlu</h4>
+                    <p class="text-primary small fw-bold">Elektronik & Yazılım</p>
+                    <hr>
+                    <div class="text-start small">
+                        <p><strong>Beceriler:</strong> Arduino programlama ve Visual Studio ile uygulama geliştirme.</p>
+                        <p><strong>Projeler:</strong> Akıllı trafik ışığı ve araç hareket sistemleri deneyimi.</p>
+                        <p><strong>Hedef:</strong> Elektrik-Elektronik veya Yazılım Mühendisliği; IoT ve gömülü sistemler.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="glass-card text-center">
+                    <img src="habipcinarozkaplan.jpeg" class="team-img" alt="Habip Çınar Özkaplan">
+                    <h4>Habip Çınar Özkaplan</h4>
+                    <p class="text-primary small fw-bold">Elektronik & Donanım</p>
+                    <hr>
+                    <div class="text-start small">
+                        <p><strong>Beceriler:</strong> KiCad ile PCB tasarımı, Fusion 360 mekanik parça modelleme.</p>
+                        <p><strong>Projeler:</strong> Arduino tabanlı programlanabilir Macropad (Kısayol Klavyesi).</p>
+                        <p><strong>Hedef:</strong> Elektrik-Elektronik Mühendisliği; robotik teknolojileri ve IoT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 text-center bg-white p-4 rounded-4 shadow-sm border">
+            <h5 class="fw-bold">Mentör: Nurullah Aksel</h5>
+            <p class="text-muted mb-0">Garip Zeycan Yıldırım Fen Lisesi - Samsun </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Codeavour 7.0 International</h2>
+            <p class="lead">İyilik Hali için Teknoloji, Herkes İçin Eşitlik </p>
+            <div class="mt-5">
+                <a href="https://github.com" class="text-white fs-1 me-5"><i class="fab fa-github"></i></a>
+                <a href="https://www.codeavour.org" class="text-white fs-1"><i class="fas fa-globe"></i></a>
+            </div>
+            <p class="mt-5 opacity-25 small">&copy; 2026 GZYFL2 Takımı. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
